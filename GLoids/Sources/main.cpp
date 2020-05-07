@@ -1,5 +1,8 @@
 // Local Headers
 #include "gloids.hpp"
+#include "shader.h"
+#include "Entity/EntityRenderer.h"
+#include "camera.h"
 
 // System Headers
 #include <glad/glad.h>
@@ -31,6 +34,15 @@ int main(int argc, char * argv[]) {
     gladLoadGL();
     fprintf(stderr, "OpenGL %s\n", glGetString(GL_VERSION));
 
+    //glEnable(GL_DEPTH_TEST);
+
+    Shader temp("entity.vert", "entity.frag");
+    EntityRenderer entity(&temp);
+    Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+    glm::vec3 boidPos(0.0f, 0.0f, 0.0f);
+    glm::vec3 boidColor(1.0f, 0.0f, 0.0f);
+    glm::vec3 boidScale(1.0f, 1.0f, 0.0f);
+
     // Rendering Loop
     while (glfwWindowShouldClose(mWindow) == false) {
         if (glfwGetKey(mWindow, GLFW_KEY_ESCAPE) == GLFW_PRESS)
@@ -40,6 +52,14 @@ int main(int argc, char * argv[]) {
         glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
+        glm::mat4 view = camera.GetViewMatrix();
+
+        entity.drawEntity(boidPos,
+                camera.Projection,
+                view,
+                boidColor,
+                boidScale,
+                0.0f);
         // Flip Buffers and Draw
         glfwSwapBuffers(mWindow);
         glfwPollEvents();

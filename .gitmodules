@@ -1,24 +1,23 @@
 [submodule "GLoids/Vendor/assimp"]
-    path = GLoids/Vendor/assimp
-    url = https://github.com/assimp/assimp.git
+	path = GLoids/Vendor/assimp
+	url = https://github.com/assimp/assimp.git
     branch = master
 [submodule "GLoids/Vendor/glad"]
-    path = GLoids/Vendor/glad
-    url = https://github.com/Dav1dde/glad.git
+	path = GLoids/Vendor/glad
+	url = https://github.com/Dav1dde/glad.git
     branch = c
 [submodule "GLoids/Vendor/glfw"]
-    path = GLoids/Vendor/glfw
-    url = https://github.com/glfw/glfw.git
+	path = GLoids/Vendor/glfw
+	url = https://github.com/glfw/glfw.git
     branch = master
 [submodule "GLoids/Vendor/glm"]
-    path = GLoids/Vendor/glm
-    url = https://github.com/g-truc/glm.git
+	path = GLoids/Vendor/glm
+	url = https://github.com/g-truc/glm.git
     branch = master
 [submodule "GLoids/Vendor/stb"]
-    path = GLoids/Vendor/stb
-    url = https://github.com/nothings/stb.git
+	path = GLoids/Vendor/stb
+	url = https://github.com/nothings/stb.git
     branch = master
-[submodule "GLoids/Vendor/bullet"]
-    path = GLoids/Vendor/bullet
-    url = https://github.com/bulletphysics/bullet3.git
-    branch = master
+[submodule "GLoids/Vendor/bullet3"]
+	path = GLoids/Vendor/bullet3
+	url = https://github.com/bulletphysics/bullet3.git

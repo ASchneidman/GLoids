@@ -11,12 +11,12 @@ option(ASSIMP_BUILD_SAMPLES OFF)
 option(ASSIMP_BUILD_TESTS OFF)
 add_subdirectory(GLoids/Vendor/assimp)
 
-option(BUILD_BULLET2_DEMOS OFF)
+option(BUILD_BULLET3_DEMOS OFF)
 option(BUILD_CPU_DEMOS OFF)
 option(BUILD_EXTRAS OFF)
 option(BUILD_OPENGL3_DEMOS OFF)
 option(BUILD_UNIT_TESTS OFF)
-add_subdirectory(GLoids/Vendor/bullet)
+add_subdirectory(GLoids/Vendor/bullet3)
 
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
@@ -29,7 +29,7 @@ endif()
 
 include_directories(GLoids/Headers/
                     GLoids/Vendor/assimp/include/
-                    GLoids/Vendor/bullet/src/
+                    GLoids/Vendor/bullet3/src/
                     GLoids/Vendor/glad/include/
                     GLoids/Vendor/glfw/include/
                     GLoids/Vendor/glm/
